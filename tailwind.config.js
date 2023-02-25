@@ -19,7 +19,12 @@ module.exports = {
       backgroundImage: {
         'storm-pattern': "url('./images/storm.webp')",
         'sunny-pattern': "url('./images/sunny.webp')",
-        'city-pattern': "url('./images/city2.webp')",
+        'sunny2-pattern': "url('./images/sunny2.webp')",
+        'city-pattern': "url('./images/city.webp')",
+        'sunset-pattern': "url('./images/sunset.webp')",
+        'rain-pattern': "url('./images/rain.webp')",
+        'lightning-pattern': "url('./images/lightning.webp')",
+
       },
       minHeight: {
         '10h': '10vh',
