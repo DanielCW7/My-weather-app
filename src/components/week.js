@@ -23,6 +23,7 @@ render() {
 
             <ul className="flex flex-row justify-center" id="weekly" >
                 <Card />
+                <Card />
             </ul>
     )
     }
