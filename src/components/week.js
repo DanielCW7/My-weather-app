@@ -21,8 +21,11 @@ render() {
 
     return (
 
-            <ul className="flex flex-row justify-center" id="weekly" >
-
+            <ul className="flex flex-row justify-center gap-5" id="weekly" >
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </ul>
     )
     }

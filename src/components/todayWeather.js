@@ -23,26 +23,26 @@ const Today = (props) => {
 
             if (!mounted.current) {
             // do componentDidMount logic
-            mounted.current = true;
-            console.log("day mounted")
+                mounted.current = true;
+                console.log("day mounted")
 
             } else if(mounted.current) {
             // do componentDidUpdate logic
-            icon.setAttribute("src", image)
+                icon.setAttribute("src", image)
 
-            feels_c.innerText = data?.[0] ?? "?"
-            feels_f.innerText = data?.[3] ?? "?"
-            temp_c.innerText = data?.[2] ?? "?"
-            temp_f.innerText = data?.[1] ?? "?"
-            humidity.innerText = data?.[4] ?? "?"
-            windspd.innerText = data?.[5] ?? "?"
-            cloud.innerText = cloudCover
+                feels_c.innerText = data?.[0] ?? "?"
+                feels_f.innerText = data?.[3] ?? "?"
+                temp_c.innerText = data?.[2] ?? "?"
+                temp_f.innerText = data?.[1] ?? "?"
+                humidity.innerText = data?.[4] ?? "?"
+                windspd.innerText = data?.[5] ?? "?"
+                cloud.innerText = cloudCover
 
-            cloud.innerText += " %";
-            humidity.innerText += " %"
-            windspd.innerText += " mph"
+                cloud.innerText += " %";
+                humidity.innerText += " %"
+                windspd.innerText += " mph"
 
-            console.log("day updated")
+                console.log("day updated")
             }
         });
     

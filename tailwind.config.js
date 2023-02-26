@@ -90,3 +90,7 @@ module.exports = {
   },
   plugins: [],
 }
+
+// #501D6D purple
+// #281D6D dark blue
+// #1D396D lighter blue
