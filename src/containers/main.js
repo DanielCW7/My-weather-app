@@ -2,7 +2,8 @@ import React from 'react';
 import Hero from './hero';
 import Forecast from './forecast';
 import News from './news';
-import Intro from './intro'
+import Intro from './intro';
+import Footer from './footer';
 
 const main = () => {
     return (
@@ -11,6 +12,7 @@ const main = () => {
             <Intro />
             <Forecast />
             <News />
+            <Footer />
         </div>
     )
 

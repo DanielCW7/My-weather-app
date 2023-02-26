@@ -72,7 +72,6 @@ module.exports = {
         '100p': '100%'
 
       },
-      // experimental width
       width: {
         '10': '10%',
         '20': '20%',
@@ -84,8 +83,6 @@ module.exports = {
         '80': '80%',
         '90': '90%',
       }
-
-
     },
   },
   plugins: [],

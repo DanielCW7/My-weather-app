@@ -59,30 +59,30 @@ const form = ({today, week}) => {
         };
 
         // for today's date
-    fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            data(response)
-        })
-        .catch(err => console.error(err));
+    // fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         console.log(response)
+    //         data(response)
+    //     })
+    //     .catch(err => console.error(err));
 
-        // for weekly forecast
-        fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            forecast(response, locationName)
-        })
-        .catch(err => console.error(err));
+    //     // for weekly forecast
+    //     fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         console.log(response)
+    //         forecast(response, locationName)
+    //     })
+    //     .catch(err => console.error(err));
     }
 
     return (
-        <form onSubmit={submit} id="search" className="flex flex-col justify-center max-w-1/3">
+        <form onSubmit={submit} id="search" className="flex flex-col mb-10">
             <h3 className="text-4xl font-bold"> How's the weather in... </h3>
             <p> enter the location below to get the most up-to-date weather data </p>
-            <div className="mt-10">
-                <input id="location" type="text" className="p-[10px] bg-gray-200" placeholder="Enter a location"></input>
+            <div className="mt-10 flex">
+                <input id="location" type="text" className="flex-grow p-[10px] bg-gray-200" placeholder="Enter a location"></input>
                 <button className="bg-blue-300 p-[10px]" type="submit"> submit </button>
             </div>
         </form>
