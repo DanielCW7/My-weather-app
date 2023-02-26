@@ -7,10 +7,10 @@ import Intro from './intro'
 const main = () => {
     return (
         <div>
-        <Hero />
-        <Intro />
-        <Forecast />
-        <News />
+            <Hero />
+            <Intro />
+            <Forecast />
+            <News />
         </div>
     )
 
