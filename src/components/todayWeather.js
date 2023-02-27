@@ -48,14 +48,14 @@ const Today = (props) => {
     
     return (
         
-        <div className="p-5 flex flex-row rounded-lg backdrop-filter backdrop-blur-xl backdrop-brightness-50">
+        <div className="p-5 flex flex-row rounded-lg backdrop-filter backdrop-blur-xl backdrop-brightness-50 md:flex-row">
             <div className="w-50">
                 <p className="text-center mb-5 text-white font-bold"> Today's weather </p>
                 <img src={sun} className="w-30 mx-auto" id="icon"/>
                 <p className="text-center text-6xl text-white" id="temp_f">?</p>
             </div>
 
-            <div className="w-60">
+            <div className="w-50 md:w-30 md:flex-col">
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Temp (C)</div><div className="p-1" id="temp_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (C)</div><div className="p-1" id="feels_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (F)</div><div className="p-1" id="feels_f">?</div></div> 

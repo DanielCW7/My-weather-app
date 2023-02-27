@@ -21,7 +21,7 @@ render() {
 
     return (
 
-            <ul className="flex flex-col" id="weekly" >
+            <ul className="flex flex-col md:flex-row" id="weekly" >
                 <Card />
                 <Card />
                 <Card />
