@@ -3,7 +3,7 @@ import React from "react";
 const Intro = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center px-10">
-            <div className="m-auto w-100">
+            <div className="m-auto w-100 md:w-70">
                 <h2 className="text-4xl text-[#5C00FB] font-black mb-5"><i>"This weather app ain't that great bruh"</i></h2>
                 <p> This app is like the moldy residue of the web app store, no lie. Like, 
                 I'm pretty sure that if this app was a person, this person would be the

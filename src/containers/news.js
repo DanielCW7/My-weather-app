@@ -5,7 +5,6 @@ import Story from '../components/story';
 const News = () => {
     return (
         <div className="p-10">
-        {/* individual news stories */}
             <div className="mb-5">
                 <h3 className="text-4xl font-bold text-center"> What's... <i>New?</i> ha </h3>
             </div>
@@ -14,8 +13,7 @@ const News = () => {
                 <Story />
                 <Story />
                 <Story />
-                <Story />
-
+                <button className="border-2 border-blue-300 rounded-lg flex flex-grow justify-center py-2 text-blue-300 font-bold" type="submit"> More </button>
             </div>
         </div>
     )

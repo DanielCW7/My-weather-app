@@ -38,9 +38,9 @@ const Today = (props) => {
                 windspd.innerText = data?.[5] ?? "?"
                 cloud.innerText = cloudCover
 
-                cloud.innerText += " %";
-                humidity.innerText += " %"
-                windspd.innerText += " mph"
+                // cloud.innerText += " %";
+                // humidity.innerText += " %"
+                // windspd.innerText += ""
 
                 console.log("day updated")
             }
@@ -48,20 +48,20 @@ const Today = (props) => {
     
     return (
         
-        <div className="p-10 rounded-2xl flex flex-row backdrop-filter backdrop-blur backdrop-brightness-50">
-            <div className="flex flex-col w-50 m-auto">
+        <div className="p-5 flex flex-row rounded-lg backdrop-filter backdrop-blur-xl backdrop-brightness-50">
+            <div className="w-50">
                 <p className="text-center mb-5 text-white font-bold"> Today's weather </p>
                 <img src={sun} className="w-30 mx-auto" id="icon"/>
                 <p className="text-center text-6xl text-white" id="temp_f">?</p>
             </div>
 
-            <div className="w-50 flex-wrap">
+            <div className="w-60">
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Temp (C)</div><div className="p-1" id="temp_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (C)</div><div className="p-1" id="feels_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (F)</div><div className="p-1" id="feels_f">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Humidity</div><div className="p-1" id="humidity">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Wind Spd</div><div className="p-1" id="windspd">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Clouds</div><div className="p-1" id="cloud">?</div></div> 
+                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Humidity %</div><div className="p-1" id="humidity">?</div></div> 
+                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Wind Spd (mph)</div><div className="p-1" id="windspd">?</div></div> 
+                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Cloud %</div><div className="p-1" id="cloud">?</div></div> 
 
             </div>
         </div>
