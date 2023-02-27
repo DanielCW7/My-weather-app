@@ -8,12 +8,15 @@ const News = () => {
             <div className="mb-5">
                 <h3 className="text-4xl font-bold text-center"> What's... <i>New?</i> ha </h3>
             </div>
-            <div className="flex flex-wrap flex-grow justify-center gap-5">
+            <div>
+                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-5 xl:grid-cols-4">
+                    <Story />
+                    <Story />
+                    <Story />
+                    <Story />
 
-                <Story />
-                <Story />
-                <Story />
-                <button className="border-2 border-blue-300 rounded-lg flex flex-grow justify-center py-2 text-blue-300 font-bold" type="submit"> More </button>
+                </div>
+                <button className="border-2 border-blue-300 py-2 rounded-lg block min-w-full text-blue-300 font-bold md:m-auto md:min-w-min md:w-20" type="submit"> More </button>
             </div>
         </div>
     )

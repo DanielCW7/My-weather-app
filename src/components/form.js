@@ -78,9 +78,9 @@ const form = ({today, week}) => {
     }
 
     return (
-        <form onSubmit={submit} id="search" className="flex flex-col mb-10">
+        <form onSubmit={submit} id="search" className="flex flex-col mb-10 md:w-60">
             <h3 className="text-4xl font-bold"> How's the weather in... </h3>
-            <p> enter the location below to get the most up-to-date weather data </p>
+            <p> Enter a location below to get the most up-to-date weather data. </p>
             <div className="mt-10 flex">
                 <input id="location" type="text" className="flex-grow p-[10px] bg-gray-200" placeholder="Enter a location"></input>
                 <button className="bg-blue-300 p-[10px]" type="submit"> submit </button>
