@@ -1,18 +1,16 @@
 import React from 'react';
 import Hero from '../containers/hero';
 import Forecast from '../containers/forecast';
-import News from '../containers/news';
-import Intro from '../containers/intro';
 
-const Home = () => {
-    return (
+// forecast page with more weather data
+const ForecastPage = () => {
+    return(
         <div>
             <Hero />
-            <Intro />
             <Forecast />
-            <News />
+            
         </div>
-    )
+    ) 
 }
 
-export default Home
+export default ForecastPage

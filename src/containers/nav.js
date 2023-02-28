@@ -7,6 +7,7 @@ const Nav = () => {
             <img src={sun} className="max-h-10"/>              
             <h2 className="text-[#4A00C8] font-black text-xl p-2"> Weather! </h2>
         </div>
+        
     )
 }
 
