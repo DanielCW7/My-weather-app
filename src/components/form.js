@@ -82,7 +82,7 @@ const form = ({today, week}) => {
             <h3 className="text-4xl font-bold"> How's the weather in... </h3>
             <p> Enter a location below to get the most up-to-date weather data. </p>
             <div className="mt-10 flex">
-                <input id="location" type="text" className="flex-grow p-[10px] bg-gray-200" placeholder="Enter a location"></input>
+                <input id="location" type="text" className=" flex-grow p-[10px] bg-gray-100" placeholder="Enter a location"></input>
                 <button className="bg-blue-300 p-[10px]" type="submit"> submit </button>
             </div>
         </form>

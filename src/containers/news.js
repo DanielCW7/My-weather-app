@@ -4,8 +4,8 @@ import Story from '../components/story';
 
 const News = () => {
     return (
-        <div className="p-10">
-            <div className="mb-5">
+        <div className="p-10 md: min-h-60h">
+            <div className="mb-10">
                 <h3 className="text-4xl font-bold text-center"> What's... <i>New?</i> ha </h3>
             </div>
             <div>
@@ -14,9 +14,8 @@ const News = () => {
                     <Story />
                     <Story />
                     <Story />
-
                 </div>
-                <button className="border-2 border-blue-300 py-2 rounded-lg block min-w-full text-blue-300 font-bold md:m-auto md:min-w-min md:w-20" type="submit"> More </button>
+                <button className="border-2 border-blue-300 py-2 rounded-lg block min-w-full text-blue-300 font-bold md:m-auto md:min-w-min md:w-10" type="submit"> More </button>
             </div>
         </div>
     )

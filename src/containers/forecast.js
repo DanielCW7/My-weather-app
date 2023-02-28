@@ -9,8 +9,8 @@ const Forecast = () => {
     const [val2, setVal2] = useState("");
 
     return (
-            <div className="bg-sunset-pattern bg-center bg-cover bg-fixed min-h-auto justify-center">
-                <div className="p-10 bg-gradient-to-br via-black-0 from-white">
+            <div className="bg-sunny2-pattern bg-bottom bg-cover bg-fixed min-h-auto flex flex-col justify-end md:min-h-80h">
+                <div className="p-10 bg-gradient-to-b via-white-200 from-white justify-between flex-auto md:bg-gradient-to-br">
                     <Form today={setVal} week={setVal2}/>
                     <Today val={val}/>
                 </div>
