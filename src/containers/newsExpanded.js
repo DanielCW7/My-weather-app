@@ -3,6 +3,7 @@ import Story from '../components/story';
 
 
 // only for the news page
+// useEffect to render stories on load
 const NewsExpanded = (props) => {
     return (
         <div className="p-10 md: min-h-60h">

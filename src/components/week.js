@@ -1,37 +1,49 @@
 import React, { useRef, useEffect, createElement, ReactDOM }from "react";
 import Card from './card';
 
-class Week extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            days: []
+const Week = (props) => {
+
+    // array of 7 days
+    let data = props.val2;
+    const Test = () => {
+        if(data) {
+            return data.map(day => {
+                let adjustedDate = day.datetimeStr.substring(0,10);
+                return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate}/>
+            })
+        } else {
+            
         }
-        this.populate = this.populate.bind(this);
     }
 
+    const mounted = useRef();
+        useEffect(() => {        
+            const week = document.querySelector("#weekly");
+            if (!mounted.current) {
+            // do componentDidMount logic
+                mounted.current = true;
+                console.log("week mounted");
 
-    populate() {
-    }
+            } else if(mounted.current) {
+            // do componentDidUpdate logic
+                console.log(data);
+                if(!data) {
+                    // if no data is passed
+                    return
+                } else {
+                    // if some data is passed, log it
+                    console.log(data)
+                }  
+            }
 
-render() { 
-    // const days = this.state.days.map(day => {
-    //     return  <Card temp={item.temp} low={item.low} high={item.high} date={adjustedDate} precip={item.pop} />
-    // })  
+        })
 
-    return (
+return (
 
-            <ul className="flex flex-col md:flex-row" id="weekly" >
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </ul>
+        <ul className="flex flex-col md:flex-row" id="weekly" >
+             {Test()}
+        </ul>
     )
-    }
 }
 
 export default Week

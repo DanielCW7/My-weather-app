@@ -38,10 +38,6 @@ const Today = (props) => {
                 windspd.innerText = data?.[5] ?? "?"
                 cloud.innerText = cloudCover
 
-                // cloud.innerText += " %";
-                // humidity.innerText += " %"
-                // windspd.innerText += ""
-
                 console.log("day updated")
             }
         });
