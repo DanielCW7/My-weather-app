@@ -11,7 +11,7 @@ const Card = (props) => {
                 <div className="flex flex-row flex-auto md:flex-col justify-evenly p-2 md:p-2 md:w-full lg:w-70 xl:w-60">
                     <span className="flex flex-col md:flex-row md:justify-between"><span className="font-light">High</span><span>{props.high ?? "null"}</span></span>
                     <span className="flex flex-col md:flex-row md:justify-between"><span className="font-light">Low</span><span>{props.low ?? "null"}</span></span>
-                    <span className="flex flex-col md:flex-row md:justify-between"><span className="font-light">Rain</span><span>{props.rain ?? "null"}</span></span>
+                    <span className="flex flex-col md:flex-row md:justify-between"><span className="font-light">Rain %</span><span>{props.rain ?? "null"}</span></span>
                 </div>
             </li>
     )

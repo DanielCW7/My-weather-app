@@ -5,14 +5,14 @@ const Week = (props) => {
 
     // array of 7 days
     let data = props.val2;
-    const Test = () => {
+    const test = () => {
         if(data) {
             return data.map(day => {
                 let adjustedDate = day.datetimeStr.substring(0,10);
                 return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate}/>
             })
         } else {
-            
+            return
         }
     }
 
@@ -23,7 +23,6 @@ const Week = (props) => {
             // do componentDidMount logic
                 mounted.current = true;
                 console.log("week mounted");
-
             } else if(mounted.current) {
             // do componentDidUpdate logic
                 console.log(data);
@@ -35,13 +34,12 @@ const Week = (props) => {
                     console.log(data)
                 }  
             }
-
         })
 
 return (
 
         <ul className="flex flex-col md:flex-row" id="weekly" >
-             {Test()}
+             {test()}
         </ul>
     )
 }
