@@ -3,7 +3,7 @@ import Hero from '../containers/hero';
 import Forecast from '../containers/forecast';
 
 // forecast page with more weather data
-const ForecastPage = () => {
+const SportsPage = () => {
     return(
         <div>
             <Hero />
@@ -13,4 +13,4 @@ const ForecastPage = () => {
     ) 
 }
 
-export default ForecastPage
+export default SportsPage

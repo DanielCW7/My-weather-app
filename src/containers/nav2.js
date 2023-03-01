@@ -11,7 +11,7 @@ const Nav2 = () => {
             <div className="right-0 bg-[#4A00C8] px-10 py-4 flex justify-center gap-20 text-[#fff] font-bold">
                 <Link to={'/Home'}>Home</Link>
                 <Link to={'/News'}>News</Link>
-                <Link to={'/Forecast'}>Forecast</Link>
+                <Link to={'/Sports'}>Sports</Link>
 
             </div>
         </div>

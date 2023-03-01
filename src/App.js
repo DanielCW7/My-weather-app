@@ -5,7 +5,7 @@ import Footer from './containers/footer';
 import News from './pages/newsPage';
 import Home from './pages/homePage'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Forecast from './pages/forecastPage';
+import Sports from './pages/sportsPage';
 // import pages and route here, nav and footer will wrap every page as a global element
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
             <Route exact path="/" element={<Home/>}/>
             <Route path="/Home" element={<Home/>}/>
             <Route path="/News" element={<News/>}/>
-            <Route path="/Forecast" element={<Forecast/>}/>
+            <Route path="/Sports" element={<Sports/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>
