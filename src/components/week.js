@@ -12,7 +12,7 @@ const Week = (props) => {
                 return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate}/>
             })
         } else {
-            
+            return
         }
     }
 
