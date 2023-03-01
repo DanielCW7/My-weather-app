@@ -3,23 +3,6 @@ import Story from '../components/story';
 // import news sections
 
 
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': '98a8341ffcmsh7a4d6c17a49f6ecp153be9jsn0d3a5abcccce',
-    //         'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
-    //     }
-    // };
-    
-    // fetch('https://weather338.p.rapidapi.com/news/list?limit=10', options)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         console.log(response)
-            
-    //     })
-    //     .catch(err => console.error(err));
-
-
 const News = () => {
 
     return (
