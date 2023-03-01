@@ -5,8 +5,7 @@ import NewsExpanded from '../containers/newsExpanded';
 const NewsPage = () => {
     return (
         <div>
-            <Hero />
-            <NewsExpanded />
+            
         </div>
     )
 }

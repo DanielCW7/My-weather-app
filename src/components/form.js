@@ -59,22 +59,22 @@ const form = ({today, week}) => {
         };
 
         // for today's date
-    fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            data(response)
-        })
-        .catch(err => console.error(err));
+    // fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         console.log(response)
+    //         data(response)
+    //     })
+    //     .catch(err => console.error(err));
 
-        // for weekly forecast
-        fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            forecast(response, locationName)
-        })
-        .catch(err => console.error(err));
+    //     // for weekly forecast
+    //     fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         console.log(response)
+    //         forecast(response, locationName)
+    //     })
+    //     .catch(err => console.error(err));
     }
 
     return (
