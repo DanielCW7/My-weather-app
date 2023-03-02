@@ -11,15 +11,14 @@ import Sports from './pages/sportsPage';
 const App = () => {
   return (
     <BrowserRouter>
-      <Nav/>
-      <Nav2/>
-        <Routes>
-            <Route exact path="/" element={<Home/>}/>
-            <Route path="/Home" element={<Home/>}/>
-            <Route path="/News" element={<News/>}/>
-            <Route path="/Sports" element={<Sports/>}/>
-        </Routes>
-      <Footer/>
+      <Nav />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/News" element={<News />} />
+        <Route path="/Sports" element={<Sports />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
