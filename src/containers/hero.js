@@ -1,6 +1,6 @@
 import React from 'react';
 
-// hero should reveice props depending on the page it's on! dynamic text and whatnot
+// hero should recieve props depending on the page it's on! dynamic text and whatnot
 const Hero = (props) => {
     return (
         <div id="hero" className="flex flex-col justify-center min-h-80h bg-fixed bg-sunset-pattern bg-cover px-20 lg:min-h-60h">

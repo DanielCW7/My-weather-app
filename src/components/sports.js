@@ -1,8 +1,7 @@
 import React from "react";
 
+const Sport = (props) => {
 
-const Story = (props) => {
-console.log("weather.com" + props.link)
     return (
         <div className="flex min-h-[350px] bg-cover" style={{backgroundImage: `url(${props.img})`}}>
             <div className="flex flex-col justify-end p-5 bg-gradient-to-t from-black text-white w-full">
@@ -14,4 +13,4 @@ console.log("weather.com" + props.link)
     )
 }
 
-export default Story
+export default Sport
