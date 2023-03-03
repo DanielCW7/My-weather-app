@@ -7,7 +7,7 @@ const Forecast = () => {
 
     const [val, setVal] = useState("");
     const [val2, setVal2] = useState("");
-
+console.log(val, val2)
     return (
             <div className="bg-sunny2-pattern bg-bottom bg-cover bg-fixed min-h-auto flex flex-col justify-end md:min-h-80h">
                 <div className="p-10 bg-gradient-to-b via-white-200 from-white justify-between flex-auto md:bg-gradient-to-br">

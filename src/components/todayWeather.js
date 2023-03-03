@@ -1,15 +1,29 @@
 import React, { useEffect, useRef }from "react";
-import sun from '../images/sun.png';
-
+import cloud from '../images/cloud.png';
+import moon from '../images/moon.png'
+import partiallyCloudy from '../images/partiallyCloudy.png'
+import rainy from '../images/rainy.png'
+import snow from '../images/snow.png'
+import sun from '../images/sun.png'
 // useEffect to keep the fields updated? lifecycle methods?
 
 const Today = (props) => {
 
         const data = props?.val?.stats ?? "?";
-        const image = props?.val?.icon ?? sun;
-        const cloudCover = props?.val?.cloud ?? "?";
+        let image;
+        if(props?.val?.icon === "Sunny") { image = sun } 
+        else if(props?.val?.icon === "Overcast") { image = cloud } 
+        else if(props?.val?.icon === "Rainy") { image = rainy } 
+        else if(props?.val?.icon === "Partly cloudy") { image = partiallyCloudy } 
+        else if(props?.val?.icon === "Clear") { image = sun } 
 
-        const mounted = useRef();
+        else {
+            console.log(image)
+            image = sun
+        }
+        const cloudCover = props?.val?.cloud ?? "?";        
+        
+
         useEffect(() => {        
             const icon = document.querySelector("#icon");
 
@@ -21,13 +35,6 @@ const Today = (props) => {
             const windspd = document.querySelector("#windspd");
             const cloud = document.querySelector("#cloud");
 
-            if (!mounted.current) {
-            // do componentDidMount logic
-                mounted.current = true;
-                console.log("day mounted")
-
-            } else if(mounted.current) {
-            // do componentDidUpdate logic
                 icon.setAttribute("src", image)
 
                 feels_c.innerText = data?.[0] ?? "?"
@@ -39,7 +46,7 @@ const Today = (props) => {
                 cloud.innerText = cloudCover
 
                 console.log("day updated")
-            }
+            
         });
     
     return (
@@ -47,7 +54,7 @@ const Today = (props) => {
         <div className="p-5 flex flex-row rounded-lg backdrop-filter backdrop-blur-xl backdrop-brightness-50 md:p-10 md:w-60 lg:w-40">
             <div className="w-50">
                 <p className="text-center mb-5 text-white font-bold"> Today's weather </p>
-                <img src={sun} className="max-w-[60px] mx-auto" id="icon"/>
+                <img className="max-w-[60px] mx-auto" id="icon"/>
                 <p className="text-center text-6xl text-white" id="temp_f">?</p>
             </div>
 

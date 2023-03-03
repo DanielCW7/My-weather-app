@@ -9,32 +9,32 @@ const Week = (props) => {
         if(data) {
             return data.map(day => {
                 let adjustedDate = day.datetimeStr.substring(0,10);
-                return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate}/>
+                return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate} img={day.conditions}/>
             })
         } else {
             return
         }
     }
 
-    const mounted = useRef();
-        useEffect(() => {        
-            const week = document.querySelector("#weekly");
-            if (!mounted.current) {
-            // do componentDidMount logic
-                mounted.current = true;
-                console.log("week mounted");
-            } else if(mounted.current) {
-            // do componentDidUpdate logic
-                console.log(data);
-                if(!data) {
-                    // if no data is passed
-                    return
-                } else {
-                    // if some data is passed, log it
-                    console.log(data)
-                }  
-            }
-        })
+    // const mounted = useRef();
+    //     useEffect(() => {        
+    //         const week = document.querySelector("#weekly");
+    //         if (!mounted.current) {
+    //         // do componentDidMount logic
+    //             mounted.current = true;
+    //             console.log("week mounted");
+    //         } else if(mounted.current) {
+    //         // do componentDidUpdate logic
+    //             console.log(data);
+    //             if(!data) {
+    //                 // if no data is passed
+    //                 return
+    //             } else {
+    //                 // if some data is passed, log it
+    //                 console.log(data)
+    //             }  
+    //         }
+    //     })
 
 return (
 
