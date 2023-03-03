@@ -7,7 +7,7 @@ const Today = (props) => {
 
         const data = props?.val?.stats ?? "?";
         const image = props?.val?.icon ?? sun;
-        const cloudCover = props.val.cloud ?? "?";
+        const cloudCover = props?.val?.cloud ?? "?";
 
         const mounted = useRef();
         useEffect(() => {        

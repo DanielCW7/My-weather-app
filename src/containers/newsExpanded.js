@@ -19,16 +19,8 @@ const NewsExpanded = (props) => {
         }
     } 
  
-    const mounted = useRef();
 
     useEffect(() => {        
-
-        if (!mounted.current) {
-        // do componentDidMount logic
-            mounted.current = true;
-
-        } else if(mounted.current) {
-        // do componentDidUpdate logic
             const options = {
                 method: 'GET',
                 headers: {
@@ -44,8 +36,7 @@ const NewsExpanded = (props) => {
                     data(response)
                 })
                 .catch(err => console.error(err));
-        }
-    }, []);
+        }, []);
 
     return (
         <div className="p-10 md: min-h-60h">

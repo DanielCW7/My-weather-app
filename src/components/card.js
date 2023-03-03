@@ -1,9 +1,15 @@
 import React, {setState, Component} from "react";
-import sun from '../images/sun.png';
-
+import cloud from '../images/cloud.png';
+import moon from '../images/moon.png'
+import partiallyCloudy from '../images/partiallyCloudy.png'
+import rainy from '../images/rainy.png'
+import snow from '../images/snow.png'
+import sun from '../images/sun.png'
 
 
 const Card = (props) => {
+
+    // need to conditionally render the icons based on props.conditions
     return (
             <li className="flex flex-row bg-gray-200 items-center border-b border-gray-300 px-10 md:flex-col md:px-1 md:border-x md:w-full">
                 <img src={sun} className="w-10 m-2 md:w-50 md:max-w-[60px]" /> 

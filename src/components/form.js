@@ -1,7 +1,7 @@
 import React from "react";
 import sun from '../images/sun.png'
 
-const form = ({today, week}) => {
+const Form = ({today, week}) => {
 
     // today's weather
     const data = (info) => {
@@ -24,13 +24,14 @@ const form = ({today, week}) => {
         today(updateddata)
     }
 
-    // future forecast, in this case only 3 days
+    // future forecast 7 days
     const forecast = (info, name) => {
         const list = []
         const region = info?.locations[name]?.values ?? "error"
 
         for(let i = 1; i <= 7; i++) {
             list.push(region[i])
+            console.log(list)
         }
 
         console.log(list, "this week!")
@@ -38,43 +39,51 @@ const form = ({today, week}) => {
     }
 
     // form event listener
-    const submit = (event) => {
+    const submit = async (event) => {
         event.preventDefault();
         let locationName = document.querySelector("#location").value;
     
-        const options1 = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '7bc079f762mshb12917c96b76497p18bbd5jsn5f15a86d83f3',
-                'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-            }
-        };
+    //     const options1 = {
+    //         method: 'GET',
+    //         headers: {
+    //             'X-RapidAPI-Key': '7bc079f762mshb12917c96b76497p18bbd5jsn5f15a86d83f3',
+    //             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+    //         }
+    //     };
 
-        const options2 = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '98a8341ffcmsh7a4d6c17a49f6ecp153be9jsn0d3a5abcccce',
-                'X-RapidAPI-Host': 'visual-crossing-weather.p.rapidapi.com'
-            }
-        };
+    //     const options2 = {
+    //         method: 'GET',
+    //         headers: {
+    //             'X-RapidAPI-Key': '98a8341ffcmsh7a4d6c17a49f6ecp153be9jsn0d3a5abcccce',
+    //             'X-RapidAPI-Host': 'visual-crossing-weather.p.rapidapi.com'
+    //         }
+    //     };
 
-        // for today's date
-    // fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         console.log(response)
-    //         data(response)
-    //     })
-    //     .catch(err => console.error(err));
+    //     // for today's date
+    //     const getToday = async () => {
+    //         try {   
+    //             const response = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${locationName}`, options1)
+    //             const info = await response.json()
+    //                 console.log(info)
+    //                 data(info)
+    //         } catch(error) { 
+    //             throw "An error occurred when trying to fetch today's weather data"
+    //         }
+    //     }
 
     //     // for weekly forecast
-    //     fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         console.log(response)
-    //         forecast(response, locationName)
-    //     })
-    //     .catch(err => console.error(err));
+    //     const getWeek = async () => {
+    //         try {
+    //             const response = await fetch(`https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=${locationName}&contentType=json&unitGroup=us&shortColumnNames=0`, options2)
+    //             const info = await response.json()
+    //                 console.log(info)    
+    //                 forecast(info, locationName)
+    //         } catch(error) {
+    //             throw "An error occurred when trying to fetch weather data of the next 7 days"
+    //         }
+    // }
+    //     getToday()
+    //     getWeek()
     }
 
     return (
@@ -90,4 +99,4 @@ const form = ({today, week}) => {
 
 }
 
-export default form
+export default Form

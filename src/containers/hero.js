@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import storm from '../images/stormCloud.png'
 
 // hero should recieve props depending on the page it's on! dynamic text and whatnot
 const Hero = (props) => {
+
     return (
         <div id="hero" className="flex flex-col justify-center min-h-80h bg-fixed bg-sunset-pattern bg-cover px-20 lg:min-h-60h">
             <h1 className="text-5xl font-bold text-white text-center mb-2"> Weather! <i>Amiright??</i> </h1>
