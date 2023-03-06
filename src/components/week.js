@@ -11,35 +11,23 @@ const Week = (props) => {
                 let adjustedDate = day.datetimeStr.substring(0,10);
                 return <Card key={day.datetime}  high={day.maxt} low={day.mint} rain={day.pop} date={adjustedDate} img={day.conditions}/>
             })
-        } else {
-            return
-        }
+        } else { return <div className="p-10 bg-gray-200 block text-center w-full"> Search for a location to get your 7 day forecast! </div> }
     }
-
-    // const mounted = useRef();
-    //     useEffect(() => {        
-    //         const week = document.querySelector("#weekly");
-    //         if (!mounted.current) {
-    //         // do componentDidMount logic
-    //             mounted.current = true;
-    //             console.log("week mounted");
-    //         } else if(mounted.current) {
-    //         // do componentDidUpdate logic
-    //             console.log(data);
-    //             if(!data) {
-    //                 // if no data is passed
-    //                 return
-    //             } else {
-    //                 // if some data is passed, log it
-    //                 console.log(data)
-    //             }  
-    //         }
-    //     })
+    
 
 return (
 
-        <ul className="flex flex-col md:flex-row" id="weekly" >
+        <ul className="flex flex-col flex-auto md:flex-row " id="weekly" >
              {test()}
+
+             {/* <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/> */}
+
         </ul>
     )
 }

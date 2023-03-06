@@ -13,7 +13,8 @@ const Today = (props) => {
         const data = props?.val?.stats ?? "?";
         let image;
         console.log(props.val.icon)
-        if(props?.val?.icon === "Sunny") { image = sun } 
+        if(props?.val?.icon === undefined) { image = sun } 
+        else if(props?.val?.icon === "Sunny") { image = sun } 
         else if(props?.val?.icon === "Overcast") { image = cloud } 
         else if(props?.val?.icon === "Partly cloudy") { image = partiallyCloudy } 
         else if(props?.val?.icon === "Clear") { image = sun } 
@@ -54,7 +55,7 @@ const Today = (props) => {
             <div className="w-50">
                 <p className="text-center mb-5 text-white font-bold" id="conditions"> Today's weather </p>
                 <img className="max-w-[60px] mx-auto" id="icon"/>
-                <p className="text-center text-6xl text-white" id="temp_f">?</p>
+                <p className="text-center text-4xl md:text-5xl text-white" id="temp_f">?</p>
             </div>
 
             <div className="w-50 md:flex-col">

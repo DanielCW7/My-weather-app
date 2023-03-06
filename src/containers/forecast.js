@@ -20,7 +20,6 @@ const Forecast = () => {
     const [val, setVal] = useState("");
     const [val2, setVal2] = useState("");
     // detect the icon from today's weather, here in "val.icon", first undefined
-    // console.log(val.icon, val2);
 
     // default background
     let background;
@@ -38,9 +37,6 @@ const Forecast = () => {
         else { return background = sunny }
     }
 
-    // useEffect(() => {
-    //     console.log(condition);
-    // })
 
     return (
             <div style={{backgroundImage: `url(${bg()})`}} className="bg-sunny-pattern bg-bottom bg-cover bg-fixed min-h-auto flex flex-col justify-end md:min-h-80h">
@@ -48,7 +44,7 @@ const Forecast = () => {
                     <Form today={setVal} week={setVal2} />
                     <Today val={val} />
                 </div>
-                <div className="flex flex-row justify-center border md:grid md:grid-cols-1">
+                <div className="flex flex-row justify-center">
                     <Week val2={val2}/>
                 </div>
             </div>
