@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <div>
-            <Hero title="*Obligatory h1 tag*" background={background} font={font}/>
+            <Hero title="Weather!" background={background} font={font}/>
             <Intro />
             <Forecast />
             <News />

@@ -45,12 +45,12 @@ const News = () => {
 
 
     return (
-        <div className="p-10 md:min-h-60h">
+        <div className="p-20">
             <div className="mb-10">
-                <h3 className="text-4xl font-bold text-center"> What's new? </h3>
+                <h3 className="text-4xl font-black text-center text-[#5C00FB]"> <i>What's new?</i> </h3>
             </div>
             <div>
-                <div id="newsContainer" className="grid gap-5 py-5 md:grid-cols-2 lg:grid-cols-3 mb-5 xl:grid-cols-4">
+                <div id="newsContainer" className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-5 xl:grid-cols-4">
                     {loading ? <Loading /> : stories}
                 </div>
             </div>
