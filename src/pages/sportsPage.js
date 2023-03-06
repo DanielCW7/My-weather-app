@@ -55,7 +55,7 @@ const SportsPage = () => {
         <div>
             <Hero title="Sports News" background={background} font={font}/>
             <div id="newsContainer" className="p-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 mb-5 xl:grid-cols-4">
-                {/* {loading ? <Loading /> : sports} */}
+                {loading ? <Loading /> : sports}
             </div>
         </div>
     ) 
