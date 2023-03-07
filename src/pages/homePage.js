@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import Hero from '../containers/hero';
 import Forecast from '../containers/forecast';
 import News from '../containers/news';
-import Intro from '../containers/intro';
 import sunset from '../images/sunset.webp'
 
 const Home = () => {
@@ -12,8 +10,6 @@ const Home = () => {
 
     return (
         <div>
-            <Hero title="Weather!" background={background} font={font}/>
-            <Intro />
             <Forecast />
             <News />
         </div>

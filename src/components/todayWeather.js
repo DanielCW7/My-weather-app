@@ -1,6 +1,5 @@
 import React, { useEffect, useRef }from "react";
 import cloud from '../images/cloud.png';
-import moon from '../images/moon.png'
 import partiallyCloudy from '../images/partiallyCloudy.png';
 import rainy from '../images/rainy.png';
 import snow from '../images/snow.png';
@@ -36,29 +35,30 @@ const Today = (props) => {
             const conditions = document.querySelector("#conditions");
 
                 icon.setAttribute("src", image)
-                conditions.innerText = props?.val?.icon ?? "Today's weather";
+                conditions.innerText = props?.val?.icon ?? "Today's weather is ...";
                 feels_c.innerText = data?.[0] ?? "?"
                 feels_f.innerText = data?.[3] ?? "?"
                 temp_c.innerText = data?.[2] ?? "?"
-                temp_f.innerText = data?.[1] ?? "?"
+                temp_f.innerText = data?.[1] ?? ""
                 humidity.innerText = data?.[4] ?? "?"
                 windspd.innerText = data?.[5] ?? "?"
                 cloud.innerText = cloudCover
 
                 console.log("day updated")
-            
         });
     
     return (
         
-        <div className="p-5 flex flex-row rounded-lg backdrop-filter backdrop-blur-xl backdrop-brightness-50 md:p-10 md:w-60 lg:w-40">
-            <div className="w-50">
-                <p className="text-center mb-5 text-white font-bold" id="conditions"> Today's weather </p>
-                <img className="max-w-[60px] mx-auto" id="icon"/>
-                <p className="text-center text-4xl md:text-5xl text-white" id="temp_f">?</p>
+        <div className="flex flex-row bg-black rounded-3xl bg-opacity-50 md:w-80 lg:w-40">
+            <div className="p-5 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl bg-gray-200 w-60 flex flex-col justify-center md:p-10">
+                <p className="text-center mb-5 text-gray-800 font-bold text-md md:text-lg" id="conditions"></p>
+                <div className="flex flex-row items-center justify-center">
+                    <img className="max-w-[80px]" id="icon"/>
+                    <p className="text-center text-4xl md:text-5xl text-gray-800" id="temp_f">?</p>                    
+                </div>
             </div>
 
-            <div className="w-50 md:flex-col">
+            <div className="p-5 w-50 md:flex-col md:p-10">
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Temp (C)</div><div className="p-1" id="temp_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (C)</div><div className="p-1" id="feels_c">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (F)</div><div className="p-1" id="feels_f">?</div></div> 

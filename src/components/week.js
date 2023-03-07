@@ -18,15 +18,15 @@ const Week = (props) => {
 return (
 
         <ul className="flex flex-col flex-auto md:flex-row " id="weekly" >
-             {test()}
+             {/* {test()} */}
 
-             {/* <Card/>
              <Card/>
              <Card/>
              <Card/>
              <Card/>
              <Card/>
-             <Card/> */}
+             <Card/>
+             <Card/>
 
         </ul>
     )
