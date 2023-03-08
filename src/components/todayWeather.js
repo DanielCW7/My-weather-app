@@ -11,8 +11,8 @@ const Today = (props) => {
 
         const data = props?.val?.stats ?? "?";
         let image;
-        console.log(props.val.icon)
-        if(props?.val?.icon === undefined) { image = sun } 
+        console.log(props.val.icon);
+        if(props?.val?.icon === undefined) { image = sun }
         else if(props?.val?.icon === "Sunny") { image = sun } 
         else if(props?.val?.icon === "Overcast") { image = cloud } 
         else if(props?.val?.icon === "Partly cloudy") { image = partiallyCloudy } 
@@ -36,34 +36,34 @@ const Today = (props) => {
 
                 icon.setAttribute("src", image)
                 conditions.innerText = props?.val?.icon ?? "Today's weather is ...";
-                feels_c.innerText = data?.[0] ?? "?"
-                feels_f.innerText = data?.[3] ?? "?"
-                temp_c.innerText = data?.[2] ?? "?"
-                temp_f.innerText = data?.[1] ?? ""
-                humidity.innerText = data?.[4] ?? "?"
-                windspd.innerText = data?.[5] ?? "?"
-                cloud.innerText = cloudCover
+                feels_c.innerText = data?.[0] ?? "?";
+                feels_f.innerText = data?.[3] ?? "?";
+                temp_c.innerText = data?.[2] ?? "?";
+                temp_f.innerHTML = data?.[1] ?? "";
+                humidity.innerText = data?.[4] ?? "?";
+                windspd.innerText = data?.[5] ?? "?";
+                cloud.innerText = cloudCover;
 
-                console.log("day updated")
+                console.log("day updated");
         });
     
     return (
         
-        <div className="flex flex-row bg-black rounded-3xl bg-opacity-50 md:w-80 lg:w-40">
-            <div className="p-5 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl bg-gray-200 w-60 flex flex-col justify-center md:p-10">
+        <div className="flex flex-row bg-black rounded-3xl bg-opacity-50 md:w-80 lg:w-60 xl:w-40">
+            <div className="p-5 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl bg-gray-200 w-60 md:w-50 flex flex-col justify-center md:p-10">
                 <p className="text-center mb-5 text-gray-800 font-bold text-md md:text-lg" id="conditions"></p>
                 <div className="flex flex-row items-center justify-center">
-                    <img className="max-w-[80px]" id="icon"/>
-                    <p className="text-center text-4xl md:text-5xl text-gray-800" id="temp_f">?</p>                    
+                    <img className="max-w-[80px] md:max-w-[100px]" id="icon"/>
+                    <p className="text-center text-4xl md:text-6xl text-gray-800" id="temp_f"></p>                    
                 </div>
             </div>
 
             <div className="p-5 w-50 md:flex-col md:p-10">
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Temp (C)</div><div className="p-1" id="temp_c">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (C)</div><div className="p-1" id="feels_c">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Feels like (F)</div><div className="p-1" id="feels_f">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Humidity %</div><div className="p-1" id="humidity">?</div></div> 
-                <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Wind Spd (mph)</div><div className="p-1" id="windspd">?</div></div> 
+                <div className="flex flex-row justify-between text-white border-b border-dotted border-gray-400"><div className="p-1 font-light">Temp (C)</div><div className="p-1" id="temp_c">?</div></div> 
+                <div className="flex flex-row justify-between text-white border-b border-dotted border-gray-400"><div className="p-1 font-light">Feels like (C)</div><div className="p-1" id="feels_c">?</div></div> 
+                <div className="flex flex-row justify-between text-white border-b border-dotted border-gray-400"><div className="p-1 font-light">Feels like (F)</div><div className="p-1" id="feels_f">?</div></div> 
+                <div className="flex flex-row justify-between text-white border-b border-dotted border-gray-400"><div className="p-1 font-light">Humidity %</div><div className="p-1" id="humidity">?</div></div> 
+                <div className="flex flex-row justify-between text-white border-b border-dotted border-gray-400"><div className="p-1 font-light">Wind Spd (mph)</div><div className="p-1" id="windspd">?</div></div> 
                 <div className="flex flex-row justify-between text-white"><div className="p-1 font-light">Cloud %</div><div className="p-1" id="cloud">?</div></div> 
 
             </div>
