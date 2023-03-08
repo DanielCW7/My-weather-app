@@ -8,40 +8,40 @@ const News = () => {
     const [stories, setStories] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // const data = (response) => {
-    //     if(response) {        
-    //         const storyComponents = response.map(item => {
-    //             return <Story key={item.id} link={item.url} headline={item.seometa.title} desc={item.seometa.description} img={item.variants[0]}/>
-    //         });
-    //         setStories(storyComponents);
-    //         setLoading(false);
-    //     } else {
-    //         setStories([]);
-    //     }
-    // } 
+    const data = (response) => {
+        if(response) {        
+            const storyComponents = response.map(item => {
+                return <Story key={item.id} link={item.url} headline={item.seometa.title} desc={item.seometa.description} img={item.variants[0]}/>
+            });
+            setStories(storyComponents);
+            setLoading(false);
+        } else {
+            setStories([]);
+        }
+    } 
  
-    // useEffect(() => {        
-    //     const options = {
-    //         method: 'GET',
-    //         headers: {
-    //             'X-RapidAPI-Key': '98a8341ffcmsh7a4d6c17a49f6ecp153be9jsn0d3a5abcccce',
-    //             'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
-    //         }
-    //     };
+    useEffect(() => {        
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '98a8341ffcmsh7a4d6c17a49f6ecp153be9jsn0d3a5abcccce',
+                'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
+            }
+        };
         
-    //     const getNews = async () => {
-    //         try {
-    //             const response = await fetch('https://weather338.p.rapidapi.com/news/list?offset=0&limit=4', options)
-    //             const info = await response.json()
-    //                 console.log(info)
-    //                 data(info)
-    //         } catch(error) {
-    //             throw "An error occurred when trying to fetch today's weather data"
-    //         }
-    //     }
-    //     getNews()    
+        const getNews = async () => {
+            try {
+                const response = await fetch('https://weather338.p.rapidapi.com/news/list?offset=0&limit=4', options)
+                const info = await response.json()
+                    console.log(info)
+                    data(info)
+            } catch(error) {
+                throw "An error occurred when trying to fetch today's weather data"
+            }
+        }
+        getNews()    
 
-    // }, []);
+    }, []);
 
 
     return (
