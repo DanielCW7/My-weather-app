@@ -1,23 +1,27 @@
 import React, { useEffect, useState, useRef }from "react";
 import Story from '../components/story';
 import Loading from '../components/loader.js';
-
+import Error from '../components/error'; 
 
 const News = () => {
  
     const [stories, setStories] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const data = (response) => {
-        if(response) {        
-            const storyComponents = response.map(item => {
+    const data = (info, response) => {
+        console.log(info)
+        if(response.status === 200) {        
+            const storyComponents = info.map(item => {
                 return <Story key={item.id} link={item.url} headline={item.seometa.title} desc={item.seometa.description} img={item.variants[0]}/>
             });
             setStories(storyComponents);
             setLoading(false);
         } else {
             setStories([]);
-        }
+            const storyComponents = <Error status={response.status}/>
+        
+            setStories(storyComponents);
+            setLoading(false);        }
     } 
  
     useEffect(() => {        
@@ -33,8 +37,9 @@ const News = () => {
             try {
                 const response = await fetch('https://weather338.p.rapidapi.com/news/list?offset=0&limit=4', options)
                 const info = await response.json()
-                    console.log(info)
-                    data(info)
+                    console.log("fetching news...", response.status)
+                
+                data(info, response)
             } catch(error) {
                 throw "An error occurred when trying to fetch today's weather data"
             }

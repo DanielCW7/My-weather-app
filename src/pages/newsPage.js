@@ -3,6 +3,7 @@ import Hero from '../containers/hero';
 import NewsExpanded from '../containers/newsExpanded';
 import skyline from '../images/skyline.jpg';
 // only holds news stories from the newsExpanded component
+
 const NewsPage = () => {
 
     const font = {color: '#fff', textShadow: '2px 2px 2px #000'}

@@ -78,6 +78,7 @@ const Form = ({today, week}) => {
                 const info = await response.json()
                     forecast(info, locationName)
             } catch(error) {
+                alert("An error occurred when trying to fetch weather data of the next 7 days")
                 throw "An error occurred when trying to fetch weather data of the next 7 days"
             }
         }

@@ -6,6 +6,7 @@ const Week = (props) => {
     // array of 7 days
     let data = props.val2;
     const test = () => {
+        console.log(data)
         if(data) {
             return data.map(day => {
                 let adjustedDate = day.datetimeStr.substring(0,10);
