@@ -21,9 +21,9 @@ const Card = (props) => {
 
     return (
             <li className="flex flex-row bg-gray-200 items-center border-b border-gray-300 px-10 md:flex-col md:px-2 md:border-x md:w-full">
-                <div className="flex flex-row md:flex-col items-center justify-evenly border-r border-gray-300 md:border-b md:p-0 border-r-0">
-                    <img src={check(props.img)} className="w-1/3" /> 
+                <div className="flex flex-row md:flex-col items-center justify-evenly border-r border-gray-300 md:p-0 border-r-0">
                     <p className="text-gray-800 md:text-sm lg:text-md lg:text-lg"> {props.date ?? "?"} </p>                    
+                    <img src={check(props.img)} className="w-1/3" /> 
                 </div>
 
                 <div className="flex flex-row flex-auto md:flex-col justify-evenly p-2 md:px-0 md:py-4 md:w-full lg:max-w-[150px]">
